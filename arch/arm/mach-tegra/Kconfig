@@ -16,6 +16,13 @@ if ARCH_TEGRA
 
 comment "NVIDIA Tegra options"
 
+config TEGRA3_VOLTAGE_CONTROL
+        bool "Enable user voltage control on Tegra 3 CPU"
+        depends on TEGRA_SILICON_PLATFORM && ARCH_TEGRA_3x_SOC
+        default n
+        help
+          CPUfreq voltage control interface for the Tegra 3 CPU
+
 config ARCH_TEGRA_2x_SOC
 	bool "Tegra 2 family SOC"
 	default y
