@@ -38,6 +38,18 @@ source "fs/nilfs2/Kconfig"
 
 endif # BLOCK
 
+config AIO_SPEED_HACK
+	bool "Asynchronous I/O latency speed fix for SSDs"
+	default n
+	help
+	  Asynchronous I/O latency to a solid-state disk greatly
+	  increased between the 2.6.32 and 3.0 kernels.
+	  By removing the plug from do_io_submit(), there's
+	  a improvement (like 34%) in the I/O latency.
+	  
+	  Unfortunately, at this level, we don't know if the request is to
+	  a rotating disk or not.
+
 # Posix ACL utility routines
 #
 # Note: Posix ACLs can be implemented without these helpers.  Never use
