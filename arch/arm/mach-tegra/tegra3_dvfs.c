@@ -35,7 +35,7 @@
 
 #ifdef CONFIG_TEGRA3_VOLTAGE_CONTROL
 int user_mv_table[MAX_DVFS_FREQS] = {
-800, 825, 850, 875, 900, 912, 975, 1000, 1025, 1050, 1075, 1100, 1125, 1150, 11
+800, 825, 850, 875, 900, 912, 975, 1000, 1025, 1050, 1075, 1100, 1125, 1150, 11};
 #endif
 
 static bool tegra_dvfs_cpu_disabled;
